@@ -8,12 +8,34 @@
 // Cuando la jugadora no introduzca un número válido y pulse en Prueba: El número debe estar entre 1 y 100.
 
 const button = document.querySelector('.js-btn');
+const firstTrack = document.querySelector('.js-track');
+const attempts = document.querySelector('.js-attempts');
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * 100);
 }
 console.log(getRandomNumber());
 
-function handleTryButton() {}
+let attemptsTrying = 0;
+
+function handleTryButton() {
+  const inputValue = document.querySelector('.js-number').value;
+  attemptsTrying++;
+  if (inputValue > getRandomNumber()) {
+    firstTrack.innerHTML = 'Pista: Demasiado alto';
+    attempts.innerHTML = 'Número de intentos:' + attemptsTrying;
+  }
+  if (inputValue < getRandomNumber()) {
+    firstTrack.innerHTML = 'Pista: Demasiado bajo';
+    attempts.innerHTML = 'Número de intentos:' + attemptsTrying;
+  }
+  if (inputValue === getRandomNumber()) {
+    firstTrack.innerHTML = 'Has ganado campeona';
+  }
+  if (inputValue > 100 || inputValue < 0) {
+    firstTrack.innerHTML = 'Pista: El número debe estar entre 1 y 100';
+    attempts.innerHTML = 'Número de intentos:' + attemptsTrying;
+  }
+}
 
 button.addEventListener('click', handleTryButton);
