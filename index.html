@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinar el número</title>
 </head>
+<style>
+    .btn {
+        background-color: cyan;
+        color: white;
+        width: 70px;
+        height: 30px;
+    }
+</style>
 
 <body>
-
+    <h1>Adivina el número</h1>
+    <form action="" method="POST">
+        <label for="introduce number">Introduce aquí tu número:</label>
+        <input type="text" id="input" name="Introducir número" value="">
+    </form>
+    <button type="button" class="btn js-btn">Prueba</button>
+    <div>
+        <p class="js-first-track">Pista: Escribe el número y dale a Prueba</p>
+    </div>
+    <div>
+        <p class="js-second-track">Número de intentos: 0</p>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
 </body>
 
 </html>
