@@ -24,7 +24,6 @@ function handleTryButton(ev) {
   const inputValue = document.querySelector('.js-number').value;
   console.log(inputValue);
   attemptsTrying++;
-  console.log(getRandomNumber());
 
   if (inputValue > randomNumber) {
     firstTrack.innerHTML = 'Pista: Demasiado alto';
