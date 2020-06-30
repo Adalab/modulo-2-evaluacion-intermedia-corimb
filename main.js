@@ -17,19 +17,24 @@ function getRandomNumber(max) {
 console.log(getRandomNumber());
 
 let attemptsTrying = 0;
+const randomNumber = getRandomNumber();
 
-function handleTryButton() {
+function handleTryButton(ev) {
+  ev.preventDefault();
   const inputValue = document.querySelector('.js-number').value;
+  console.log(inputValue);
   attemptsTrying++;
-  if (inputValue > getRandomNumber()) {
+  console.log(getRandomNumber());
+
+  if (inputValue > randomNumber) {
     firstTrack.innerHTML = 'Pista: Demasiado alto';
     attempts.innerHTML = 'Número de intentos:' + attemptsTrying;
   }
-  if (inputValue < getRandomNumber()) {
+  if (inputValue < randomNumber) {
     firstTrack.innerHTML = 'Pista: Demasiado bajo';
     attempts.innerHTML = 'Número de intentos:' + attemptsTrying;
   }
-  if (inputValue === getRandomNumber()) {
+  if (inputValue === randomNumber) {
     firstTrack.innerHTML = 'Has ganado campeona';
   }
   if (inputValue > 100 || inputValue < 0) {
