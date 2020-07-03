@@ -5,30 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinar el número</title>
+    <link rel="stylesheet" href="./style/main.css">
 </head>
-<style>
-    .btn {
-        background-color: cyan;
-        color: white;
-        width: 70px;
-        height: 30px;
-    }
-</style>
+
 
 <body>
     <h1>Adivina el número</h1>
-    <form action="" method="POST">
-        <label for="introduce number">Introduce aquí tu número:</label>
-        <input type="text" id="input" name="Introducir número" value="" class="js-number">
+    <form action="">
+        <label for="number">Introduce aquí tu número:</label>
+        <input type="number" id="number" name="number" class="js-number" placeholder="Ej.: 8">
+        <button type="button" class="btn js-btn">Prueba</button>
+        <button type="button" class="btn js-btn hidden">Volver a jugar</button>
     </form>
-    <button type="button" class="btn js-btn">Prueba</button>
+
     <div>
         <p class="js-track">Pista: Escribe el número y dale a Prueba</p>
+        <p> Número de intentos: <span class="js-attempts">0</span></p>
     </div>
-    <div>
-        <p class="js-attempts">Número de intentos:</p>
-    </div>
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>
