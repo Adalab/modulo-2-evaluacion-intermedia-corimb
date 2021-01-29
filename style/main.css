@@ -1,12 +1,33 @@
 .btn {
-  background-color: rgb(0, 195, 255);
+  background-color: rgb(70, 109, 240);
   color: white;
   width: auto;
   height: 30px;
   border-radius: 5px;
   border: none;
+  font-family: 'Architects Daughter', cursive;
+}
+
+label {
+  font-size: x-large;
 }
 
 .hidden {
   display: none;
+}
+
+body {
+  background-color: rgb(36, 39, 43);
+  text-align: center;
+  color: rgb(247, 247, 247);
+}
+
+.main {
+  font-family: 'Architects Daughter', cursive;
+}
+
+h1 {
+  margin-top: 1em;
+  font-family: 'Indie Flower';
+  font-size: 2em;
 }
