@@ -90,10 +90,11 @@ inputValue.addEventListener('keydown', handleSubmitEnter);
 // * ponemos el prevent default en el evento al pulsar la tecla Enter para que evite enviar el formulario puesto que está relacionado con el valor del input. Lo que hacemos en realidad es evitar el submit del form.
 // Si lo ponemos en la función de updateTrack solo se ejecuta una vez y no tiene en cuenta la tecla Enter que es un evento que sucede después.
 
-import * as CONFIG  from '../config.js';
+
+const api_key = "dc6zaTOxFJmzC"
 
 function gyphGenerator () {
-  fetch(`http://api.giphy.com/v1/gifs/search?q=win&api_key=${CONFIG.default.API_KEY}`)
+  fetch(`http://api.giphy.com/v1/gifs/search?q=win&api_key=${api_key}`)
   .then(response => response.json())
     .then(json => {
       json.data
